@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Interactive Button</title>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1 class="header_text">Me to my baby Charlene</h1>
+            <h1 class="header_text">Ingat puuuu</h1>
+        </div>
+        <div class="gif_container">
+            <img src="./Images/safe.webp" alt="Cute animated illustration">
+        </div>
+        <div class="buttons">
+            <button class="btn" id="yesButton" onclick="nextPage()">Yes</button>
+            <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+        </div>
+    </div>
+    <script>
+        function nextPage() {
+            window.location.href = "yes.html";
+        }
+
+        function moveButton() {
+            const button = document.getElementById('noButton');
+            const x = Math.random() * (window.innerWidth - button.offsetWidth);
+            const y = Math.random() * (window.innerHeight - button.offsetHeight);
+
+            button.style.position = 'absolute';
+            button.style.left = `${x}px`;
+            button.style.top = `${y}px`;
+        }
+
+        // Add touch support for mobile
+        const noButton = document.getElementById('noButton');
+        noButton.addEventListener('touchstart', moveButton);
+    </script>
+</body>
+</html>

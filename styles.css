@@ -1,0 +1,74 @@
+/* Global Styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    background-color: rgb(189, 225, 122);
+    background-image: url('./background.jpg'); /* Background image */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Container */
+.container {
+    text-align: center;
+    max-width: 90%;
+    margin: auto;
+}
+
+/* Header Text */
+.header_text {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 10px 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* GIF Container */
+.gif_container {
+    margin: 20px 0;
+    background-color: rgba(255, 255, 255, 0.4); /* Semi-transparent background */
+    padding: 15px;
+    border-radius: 15px;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.gif_container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #ffffff;
+    color: #e33030;
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #f4d6d6;
+    transform: scale(1.1);
+}
+
+#noButton {
+    position: relative; /* Allow it to move freely */
+    z-index: 10; /* Ensure it remains above other elements */
+}
